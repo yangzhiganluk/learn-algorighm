@@ -6,7 +6,7 @@
 /**
  * 定义链表结构
  */
-interface ILinkListNode {
+export interface ILinkListNode {
   value: number
   next?: ILinkListNode
 }
@@ -15,7 +15,7 @@ interface ILinkListNode {
  * 反转单向链表，并返回反转之后的head node
  * @param listNode 
  */
-function reverseLinkList(listNode: ILinkListNode): ILinkListNode {
+export function reverseLinkList(listNode: ILinkListNode): ILinkListNode {
   // 定义三个指针
   let prevNode: ILinkListNode | undefined = undefined
   let curNode: ILinkListNode | undefined = undefined
@@ -30,7 +30,6 @@ function reverseLinkList(listNode: ILinkListNode): ILinkListNode {
     }
     // 反转指针
     if (curNode && prevNode) {
-      // @ts-ignore
       curNode.next = prevNode
     }
     // 整体向后移动指针
@@ -47,7 +46,7 @@ function reverseLinkList(listNode: ILinkListNode): ILinkListNode {
  * 根据数组创建单向链表
  * @param arr 
  */
-function createLinkList(arr: number[]): ILinkListNode {
+export function createLinkList(arr: number[]): ILinkListNode {
   const length = arr.length 
   if(length === 0) throw new Error('array is empty')
   // arr: [100, 200, 300]
@@ -68,9 +67,9 @@ function createLinkList(arr: number[]): ILinkListNode {
   return curNode
 }
 
-const arr = [100, 200, 300, 400, 500]
-const list = createLinkList(arr)
-console.info('list:', list)
+// const arr = [100, 200, 300, 400, 500]
+// const list = createLinkList(arr)
+// console.info('list:', list)
 
-const list1 = reverseLinkList(list)
-console.info('list1:',list1)
+// const list1 = reverseLinkList(list)
+// console.info('list1:',list1)
