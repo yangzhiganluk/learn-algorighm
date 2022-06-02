@@ -2,7 +2,7 @@
  * @description Array rotate test
  * @author 羊支甘陆
  */
-import { rotate2, rotate2 } from "./array-rotate";
+import { rotate2 } from "./array-rotate";
 
 describe('数组旋转', () => { // 一组测试用例
   it('正常情况', () => {
@@ -30,6 +30,7 @@ describe('数组旋转', () => { // 一组测试用例
   it('k不是数字', () => {
     const arr = [1, 2, 3, 4, 5, 6, 7]
     const k = 'abc'
+    // @ts-ignore
     const res = rotate2(arr, k)
     expect(res).toEqual([5, 6, 7, 1, 2, 3, 4])
   })
