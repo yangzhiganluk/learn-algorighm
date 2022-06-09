@@ -3,4 +3,4 @@
  * @author 双越老师
  */
 
-import './01-algorithm/two-numbers-sum'
+import './01-algorithm/binary-search-tree'
